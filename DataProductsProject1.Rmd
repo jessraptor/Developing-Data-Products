@@ -1,0 +1,51 @@
+---
+title: "My favorite Places"
+author: "Jesica Scott"
+date: "April 7, 2019"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+## R Markdown
+
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity!
+
+Review criteria
+The rubric contains the following two questions:
+
+Does the web page feature a date and is this date less than two months before the date that you're grading this assignment?
+Does the web page feature an interactive map that appears to have been created with Leaflet?
+
+## Approach
+
+I will proceed by creating a map consisting of several of my favorite places, enjoy!
+
+## First 
+
+We must call the correct package and tiles.
+```{r,echo=TRUE}
+library(leaflet)
+```
+
+```{r,echo=TRUE}
+my_map<-leaflet()%>%addTiles()
+```
+And here's our first point.
+```{r,echo=TRUE}
+my_map<-my_map%>%addMarkers(lat=28.0011295,lng=-82.4584515,popup="The Street")
+```
+The rest follow...
+```{r,echo=TRUE}
+my_map<-my_map%>%addMarkers(lat=28.0052262,lng=-82.4593097,popup="Jug and Bottle")
+my_map<-my_map%>%addMarkers(lat=28.0112232,lng=-82.4587471,popup="Firetruck Park")
+my_map<-my_map%>%addMarkers(lat=27.9943182,lng=-82.4595965,popup="Spaddy's Coffee")
+my_map<-my_map%>%addMarkers(lat=28.0000022,lng=-82.4556860,popup="Log Park")
+
+my_map
+```
+And there you have it, done!
