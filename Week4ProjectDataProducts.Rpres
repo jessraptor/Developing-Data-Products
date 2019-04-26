@@ -1,0 +1,45 @@
+Delivering Data Products: Week 4 
+========================================================
+author: Jessica Scott
+date: 26APR2019
+autosize: true
+
+Alcohol Prices by Type and Country
+========================================================
+
+This app allows you to investigate the following with regard to the BC liquor store data:
+- Product Type
+- Product Price
+- Country of Purchase
+- Alcohol Content
+
+The Data
+========================================================
+
+```{r echo=FALSE}
+
+bcl<-read.csv("bcl-data.csv", stringsAsFactors = FALSE)
+
+summary(bcl)
+
+
+```
+
+Histogram
+========================================================
+
+```{r, echo=FALSE}
+library(ggplot2)
+
+ggplot(bcl,aes(x=Alcohol_Content,color=Type))+
+                 geom_histogram(fill='blue')
+```
+Conclusion
+========================================================
+
+```{r, echo=FALSE}
+library(ggplot2)
+
+ggplot(bcl,aes(x=Alcohol_Content,color=Type))+
+                 geom_histogram(fill='blue')
+```
